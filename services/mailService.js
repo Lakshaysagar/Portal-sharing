@@ -12,11 +12,10 @@ module.exports = async ({ from, to, subject, text, html}) => {
 
         // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: `Portal <${from}>`, // sender address
+        from: `inShare <${from}>`, // sender address
         to: to, // list of receivers
         subject: subject, // Subject line
         text: text, // plain text body
         html: html, // html body
     });
-    console.log(info);
 }
