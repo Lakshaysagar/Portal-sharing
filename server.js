@@ -25,6 +25,10 @@ const connectDB = require('./config/db');
 connectDB();
 
 app.use(express.json());
+app.set('view engine', 'ejs');
+app.get("/",function(req,res){
+  res.render("home");
+});
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
